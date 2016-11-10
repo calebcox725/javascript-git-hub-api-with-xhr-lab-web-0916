@@ -25,6 +25,13 @@
     </main>
     <div class="flexbox-container">
       <div>
+        <h3>User search</h3>  
+        <form id="search_form" onsubmit="getRepositories()">
+          <input type="text" id="username">
+          <input type="submit">
+        </form>
+      </div>
+      <div>
         <h3>Repositories</h3>
         <div id="repositories"></div>
       </div>
@@ -33,6 +40,7 @@
         <div id="details"></div>
       </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="index.js"></script>
     <!-- Open this file and call `mocha.run()` in console to run tests -->
     <div id="mocha"></div>

@@ -75,7 +75,7 @@ describe('index', () => {
 
     describe('getCommits', () => {
       it('calls out to Github', () => {
-        getCommits(el)
+        getCommits('octocat', 'test-repo')
         expect(requests.length).toBe(1)
         expect(requests[0].url).toBe('https://api.github.com/repos/octocat/test-repo/commits')
       })
@@ -83,7 +83,7 @@ describe('index', () => {
 
     describe('getBranches', () => {
       it('calls out to Github', () => {
-        getBranches(el)
+        getBranches('octocat', 'test-repo')
         expect(requests.length).toBe(1)
         expect(requests[0].url).toBe('https://api.github.com/repos/octocat/test-repo/branches')
       })
